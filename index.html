@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apartment Flag</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+
+        #frame{
+            background-color: white;
+            height:450px;
+            width:800px;
+            border: 2px solid black;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .turtle{
+            height: 30%;
+            width: 30%;
+        }
+
+        #turtle1{
+            position:absolute;
+            top:50%;
+            left:15%;
+            transform: translate(0,-50%);
+        }
+
+        #turtle2{
+            position:absolute;
+            top:50%;
+            right:15%;
+            transform: translate(0,-50%);
+        }
+
+        .shell{
+            background-color: #B19470;
+            height: 50%;
+            width: 50%;
+            position:absolute;
+            top:25%;
+            left:25%;
+            border-radius: 2000px 2000px 0 0;
+            z-index: 5
+        }
+
+        .shell-border{
+            background-color: #76453B;
+            height: 8px;
+            width: 110%;
+            position: relative;
+            left:-5%;
+            top:95%;
+            border-radius: 25%;
+        }
+        
+        .right-tilted-leg div{
+            height: 26%;
+            width: 16.5%;
+            border-radius: 60% 60% 40% 200%;
+        }
+            
+        .leg1{
+            background-color: #AFD198;
+        }
+
+        .right-tilted-leg .leg1{
+            position:absolute;
+            top:75%;
+            left:50%;
+            z-index:4;
+            transform: translate(40%,-10%) rotate(-20deg)
+        }
+
+        .leg2{
+            background-color: #A9B388;
+        }
+
+        .right-tilted-leg .leg2{
+            position:absolute;
+            top:75%;
+            left:50%;
+            transform: translate(20%,-10%) rotate(-20deg) 
+        }
+
+        .left-tilted-leg div{
+            height: 26%;
+            width: 16.5%;
+            border-radius: 60% 60% 200% 40%;
+        }
+        
+        .left-tilted-leg .leg1{
+            position:absolute;
+            top:75%;
+            right:50%;
+            z-index:4;
+            transform: translate(-40%,-10%) rotate(20deg)
+        }
+
+        .left-tilted-leg .leg2{
+            position:absolute;
+            top:75%;
+            right:50%;
+            transform: translate(-20%,-10%) rotate(20deg) 
+        }
+
+        .neck{
+            background-color: #9FC088;
+            width: 20px;
+            height: 30px;
+        }
+        #turtle1 .neck{
+            position: absolute;
+            bottom: 40%;
+            right:21%;
+            transform: rotate(30deg);
+        }
+
+        #turtle2 .neck{
+            position: absolute;
+            bottom: 40%;
+            left:21%;
+            transform: rotate(-30deg);
+
+        }
+
+        .head{
+            background-color: #AFD198;
+            height: 25%;
+            width: 15%;
+        }
+
+        #turtle1 .head{
+            border-radius: 60% 20% 70% 100%;
+            transform: rotate(35deg);
+            position: absolute;
+            right: 13%;
+            top:25%;
+            z-index: 4;
+        }
+
+        #turtle1 .eye{
+            background-color: black;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            position: absolute;
+            right: 20%;
+            top: 20%;
+        }
+
+        #turtle2 .head{
+            border-radius:20% 60% 100% 70% ;
+            transform: rotate(-35deg);
+            position: absolute;
+            left: 13%;
+            top:25%;
+            z-index: 4;
+        }
+
+        #turtle2 .eye{
+            background-color: black;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            position: absolute;
+            left: 20%;
+            top: 20%;
+        }
+
+        .tail{
+            background-color:#AFD198;
+            height: 15px;
+            width: 30px;
+        }
+
+        #turtle1 .tail{
+            border-radius: 100% 200% 200% 300%;
+            position: absolute;
+            left: 15%;
+            bottom: 28%;
+        }
+
+        #turtle2 .tail{
+            border-radius:200% 100% 300% 200% ;
+            position: absolute;
+            right: 15%;
+            bottom: 28%;
+        }
+
+        .heart div{
+            background-color: red;
+            height: 53.33px;
+            width: 34.67px;
+            border-radius: 33.33px 33.33px 0 0;
+        }
+
+        .leftside{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-70%,0) rotate(-45deg);
+        }
+
+        .rightside{
+            position: absolute;
+            top: 30%;
+            right: 50%;
+            transform: translate(70%,0) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div class="turtle" id="turtle1">
+            <div class="head">
+                <div class="eye"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="shell">
+                <div class="shell-border"></div>
+            </div>
+            <div class="right-tilted-leg">
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+            </div>
+            <div class="left-tilted-leg">
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+            </div>
+            <div class="tail"></div>
+        </div>
+        <div class="heart">
+            <div class="leftside"></div>
+            <div class="rightside"></div>
+        </div>
+        <div class="turtle" id="turtle2">
+            <div class="head">
+                <div class="eye"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="shell">
+                <div class="shell-border"></div>
+            </div>
+            <div class="left-tilted-leg">
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+            </div>
+            <div class="right-tilted-leg">
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+            </div>
+            <div class="tail"></div>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>
